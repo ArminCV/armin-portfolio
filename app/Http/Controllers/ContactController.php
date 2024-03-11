@@ -8,6 +8,7 @@ class ContactController extends Controller
 {
     public function index()
     {
-        return view('contact');
+        $contactContent = 'This is the Contact content...';
+        return view('about', ['aboutContent' => $contactContent]);return view('contact');
     }
 }

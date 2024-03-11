@@ -8,6 +8,7 @@ class PorfolioController extends Controller
 {
     public function index()
     {
-        return view('portfolio');
+        $portfolioContent = 'This is the Portfolio content...';
+        return view('about', ['aboutContent' => $portfolioContent]);
     }
 }

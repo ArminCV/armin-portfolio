@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $homeContent = 'Home Page';
+        $homeContent = 'This is Home content...';
         return view('home', ['homeContent' => $homeContent]);
     }
 }
