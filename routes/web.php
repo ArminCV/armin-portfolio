@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,12 +14,16 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
 
-Route::get('/', 'HomeController@index')->name('home');
+// Redirect root URL to the "about" page
+Route::redirect('/', '/home');
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/about', 'AboutController@index')->name('about');
 Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
 Route::get('/contact', 'ContactController@index')->name('contact');
