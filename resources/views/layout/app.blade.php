@@ -6,34 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Armin's Portfolio</title>
     <!-- Include app.css -->
-    <link rel="{{ asset('css/app.css') }}" href="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     
-    <nav class="navbar">
-        <div class="container">
-            <a href="{{ route('home') }}" >Armin's Portfolio</a>
-            <button class="btn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <!--<span class="navbar-toggler-icon"></span>-->
-            </button>
-            <div class="navbar" id="navbarNav">
-                <ul>
-                    <li>
-                        <a href="{{ route('home') }}" class="active">Home</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('about') }}">About</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('portfolio') }}">Projects</a>
-                    </li>
-                    <li>
-                        <a href="{{ route('contact') }}">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <div class="navbar">
+        <a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a>
+        <a href="{{ route('about' )}}" class="{{ request()->routeIs('about') ? 'active' : '' }}">About</a>
+        <a href="{{ route('portfolio') }}" class="{{ request()->routeIs('portfolio') ? 'active' : '' }}">Portfolio</a>
+        <a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a>
+    </div>
 
     <div class="container">
         @yield('content')

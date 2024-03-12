@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contact Page</title>
-</head>
-<body>
-    <h1>CONTACT PAGE</h1>
-    <p>{{ $contactContent }}</p>
-</body>
-</html>
+    @extends('layout.app')
+
+    @section('content')
+    <div class="container">
+        <h1>Contact Page</h1>
+        <p>{{ $contactContent }}</p>
+    </div>
+    @endsection

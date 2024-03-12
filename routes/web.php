@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\PorfolioController;
+use App\Http\Controllers\ContactController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -24,6 +27,8 @@ Route::get('/', function () {
 Route::redirect('/', '/home');
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/about', 'AboutController@index')->name('about');
-Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
-Route::get('/contact', 'ContactController@index')->name('contact');
+Route::get('/about', [AboutController::class, 'index'])->name('about');
+Route::get('/portfolio', [PorfolioController::class, 'index'])->name('portfolio');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+//Route::get('/portfolio', 'PortfolioController@index')->name('portfolio');
+//Route::get('/contact', 'ContactController@index')->name('contact');

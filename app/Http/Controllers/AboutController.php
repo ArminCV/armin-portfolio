@@ -8,7 +8,7 @@ class AboutController extends Controller
 {
     public function index()
     {
-        $aboutContent = 'This is the about me content...';
+        $aboutContent = 'This is the About me content...';
         return view('about', ['aboutContent' => $aboutContent]);
     }
 }

@@ -1,4 +1,3 @@
-<?php
     @extends('layout.app')
 
     @section('content')
@@ -7,4 +6,3 @@
         <p>{{ $aboutContent }}</p>
     </div>
     @endsection
-?>
