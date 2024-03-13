@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Armin's Portfolio</title>
     <!-- Include app.css -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css\app.css') }}" rel="stylesheet">
 </head>
 <body>
     
