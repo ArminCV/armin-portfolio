@@ -6,6 +6,11 @@ body {
 }
 
 .navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4pc rgba(0, 0, 0, 0.1);
     background-color: #333;
     overflow: hidden;
 }
@@ -34,6 +39,9 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .navbar ul li {
@@ -67,6 +75,8 @@ body {
 }
 
 /* background color */
-.custom-container {
-    background-color: #178c75;
+.container {
+    margin: 0;
+    padding: 0;
+    background-color: red;
 }
