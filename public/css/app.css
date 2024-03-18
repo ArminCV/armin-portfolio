@@ -7,18 +7,19 @@ body {
 
 .navbar {
     position: sticky;
+    justify-content: flex-end;
     top: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 999;
     box-shadow: 0 2px 4pc rgba(0, 0, 0, 0.1);
     background-color: black;
     overflow: hidden;
 }
 
 .navbar a {
-    float: left;
-    display: block;
-    color: white;
+    float: right;
+    margin-left: auto;
+    color: rgb(198, 183, 183);
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
@@ -76,8 +77,16 @@ body {
 
 /* background color */
 .container {
-    margin: 0;
-    padding: 0;
-    color: white;
-    background-color: black;
+    margin-bottom: 15%;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: none;
+    text-align: center;
 }
